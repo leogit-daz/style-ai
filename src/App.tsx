@@ -3,7 +3,8 @@ import {
   Camera, Upload, Palette, CheckSquare, History, Settings, 
   ShieldCheck, AlertTriangle, CreditCard, Lock, RefreshCw, 
   Sliders, Download, Sparkles, Trash2, ArrowRight, Eye, BookOpen,
-  Wifi, Battery, ShieldAlert, Heart, CheckCircle, Info, ChevronRight, ChevronLeft, HelpCircle, Laptop, Home
+  Wifi, Battery, ShieldAlert, Heart, CheckCircle, Info, ChevronRight, ChevronLeft, HelpCircle, Laptop, Home,
+  Archive, X, Layers, User
 } from "lucide-react";
 import { kotlinFiles } from "./kotlinFiles";
 
@@ -184,7 +185,70 @@ const STRINGS = {
     placeholderTitle: "Should I buy this?",
     placeholderSubtitle: "This will help you check if an item fits your capsule and shopping goals.",
     placeholderText: "Mock shopping check flow will be added next.",
-    placeholderBtn: "Back to Home"
+    placeholderBtn: "Back to Home",
+
+    // --- Wardrobe screen ---
+    wardrobeNav: "Wardrobe",
+    wardrobeTitle: "My Wardrobe",
+    wardrobeStats: "48 items · 12 outfits · 7 rarely worn",
+    wardrobeEmptyTitle: "Your wardrobe is empty",
+    wardrobeEmptyDesc: "Add a few items to start building outfits.",
+    filterAll: "All",
+    filterTops: "Tops",
+    filterBottoms: "Bottoms",
+    filterDresses: "Dresses",
+    filterOuterwear: "Outerwear",
+    filterShoes: "Shoes",
+    filterBags: "Bags",
+    filterAccessories: "Accessories",
+    filterUnused: "Unused",
+    filterWishlist: "Wishlist",
+    addBtnScan: "Scan item",
+    addBtnManual: "Add manually",
+    addBtnScreenshot: "Import screenshot",
+    addManualTitle: "Add Item Manually",
+    itemNamePlaceholder: "Item Name (e.g., Silk shirt)",
+    itemColorPlaceholder: "Color (e.g., Ivory Cream)",
+    addManualSubmitBtn: "Add to Closet",
+    addManualCloseBtn: "Cancel",
+    
+    // --- Item Detail screen ---
+    itemDetailTitle: "Item Analysis",
+    worksWithTitle: "Works Perfectly With",
+    outfitFormulasTitle: "Curated Outfit Formulas",
+    wearLogTitle: "Wear Log History",
+    wornCountLabel: "Worn count",
+    lastWornLabel: "Last worn",
+    plannedLooksLabel: "Planned looks",
+    deleteItemBtn: "Delete item",
+    roleCore: "Core item",
+    roleAccent: "Accent item",
+    roleOccasion: "Occasion piece",
+    roleUnused: "Low versatility",
+    roleDuplicate: "Duplicate check",
+    decisionLabelSet: "Usage Decision Status",
+    descKeep: "Keep item active",
+    descReplace: "Maybe replace",
+    descSell: "Sell or donate",
+    descWish: "Wishlist similar",
+
+    // --- Decisions screen ---
+    decisionsNav: "Decisions",
+    emptyHistoryText: "No decisions recorded inside your active profile database yet.",
+    statsSkipped: "You skipped 2 low-compatibility items.",
+    statsSaved: "3 shopping decisions saved this week.",
+
+    // --- Profile screen ---
+    profileNav: "Profile",
+    profileTitle: "Style Rule System",
+    completedStatusReady: "Active Profile Complete",
+    completedStatusNotReady: "Style Profile Not Completed",
+    palSeasonLabel: "Suggested Season",
+    bestNeutralsLabel: "Best Neutral Shades",
+    colorsCarefullyLabel: "Colors to Use Carefully",
+    silhouetteRulesTitle: "Active Silhouette Rules",
+    shoppingRulesTabTitle: "Interactive Shopping Rules",
+    noProfileDataText: "Style profile not completed yet. You can upload self-portraits to unlock personalized style parameters, or proceed with shopping checks directly."
   },
   RU: {
     appTitle: "StyleAI",
@@ -360,7 +424,70 @@ const STRINGS = {
     placeholderTitle: "Стоит ли покупать?",
     placeholderSubtitle: "Эта функция поможет понять, подходит ли вещь вашей капсуле и целям гардероба.",
     placeholderText: "Демо-проверка покупки будет добавлена следующей.",
-    placeholderBtn: "На главную"
+    placeholderBtn: "На главную",
+
+    // --- Wardrobe screen ---
+    wardrobeNav: "Гардероб",
+    wardrobeTitle: "Мой гардероб",
+    wardrobeStats: "48 предметов · 12 образов · 7 редко надеваемых",
+    wardrobeEmptyTitle: "Ваш гардероб пуст",
+    wardrobeEmptyDesc: "Добавьте несколько вещей, чтобы начать составлять образы.",
+    filterAll: "Все",
+    filterTops: "Верх",
+    filterBottoms: "Низ",
+    filterDresses: "Платья",
+    filterOuterwear: "Верхняя одежда",
+    filterShoes: "Обувь",
+    filterBags: "Сумки",
+    filterAccessories: "Аксессуары",
+    filterUnused: "Неиспользуемые",
+    filterWishlist: "Желания",
+    addBtnScan: "Сканировать вещь",
+    addBtnManual: "Вручную",
+    addBtnScreenshot: "Скриншот одежды",
+    addManualTitle: "Добавить вещь вручную",
+    itemNamePlaceholder: "Название вещи (например, Шелковая рубашка)",
+    itemColorPlaceholder: "Цвет (например, Кремовый)",
+    addManualSubmitBtn: "Добавить в шкаф",
+    addManualCloseBtn: "Отмена",
+    
+    // --- Item Detail screen ---
+    itemDetailTitle: "Паспорт предмета",
+    worksWithTitle: "Идеально сочетается с",
+    outfitFormulasTitle: "Рекомендуемые формулы",
+    wearLogTitle: "История носки",
+    wornCountLabel: "Надето раз",
+    lastWornLabel: "В последний раз",
+    plannedLooksLabel: "Запланировано выходов",
+    deleteItemBtn: "Удалить вещь",
+    roleCore: "Базовая основа",
+    roleAccent: "Акцентная деталь",
+    roleOccasion: "Редкий случай",
+    roleUnused: "Малая полезность",
+    roleDuplicate: "Уведомление о дубликатах",
+    decisionLabelSet: "Статус решения по использованию",
+    descKeep: "Оставить активной в шкафу",
+    descReplace: "Заменить со временем",
+    descSell: "Продать или подарить",
+    descWish: "Хочу похожую",
+
+    // --- Decisions screen ---
+    decisionsNav: "Решения",
+    emptyHistoryText: "Решения о покупках не сохранены в вашем текущем профиле.",
+    statsSkipped: "Вы пропустили 2 малополезные вещи.",
+    statsSaved: "3 сохраненных решения за неделю.",
+
+    // --- Profile screen ---
+    profileNav: "Профиль",
+    profileTitle: "Система правил стиля",
+    completedStatusReady: "Профиль Стиля Активен",
+    completedStatusNotReady: "Профиль Стиля не Заполнен",
+    palSeasonLabel: "Рекомендуемый Цветотип",
+    bestNeutralsLabel: "Лучшие Нейтральные Оттенки",
+    colorsCarefullyLabel: "Цвета для Осторожного Использования",
+    silhouetteRulesTitle: "Правила Силуэта и Кроя",
+    shoppingRulesTabTitle: "Правила Умных Покупок",
+    noProfileDataText: "Профиль стиля еще не заполнен полностью. Загрузите селфи и силуэт для разблокировки персональных рекомендаций, либо сразу приступайте к проверке покупок."
   }
 };
 
@@ -380,11 +507,196 @@ export default function App() {
 
   // Mobile Device screens state
   const [currentScreen, setCurrentScreen] = useState<
-    "splash" | "onboarding" | "consent" | "home" | "upload" | "analysis" | "report" | "looks" | "decisions" | "settings" | "paywall" | "shopping_check"
+    "splash" | "onboarding" | "consent" | "home" | "upload" | "analysis" | "report" | "looks" | "decisions" | "settings" | "paywall" | "shopping_check" | "wardrobe" | "profile" | "item_detail"
   >("splash");
 
   const [onboardingCompleted, setOnboardingCompleted] = useState(false);
   const [homeToast, setHomeToast] = useState<string | null>(null);
+
+  // --- MY WARDROBE STATES ---
+  const [wardrobeItems, setWardrobeItems] = useState([
+    {
+      id: "w_1",
+      name: "Cream structured blazer",
+      category: "Outerwear",
+      color: "Cream",
+      colorDir: "Warm",
+      season: "Spring/Autumn",
+      versatilityScore: 86,
+      outfitsCount: 6,
+      rarelyWorn: false,
+      isWishlist: false,
+      imageEmoji: "🧥",
+      hexColor: "#E6D5C3"
+    },
+    {
+      id: "w_2",
+      name: "Olive draped midi dress",
+      category: "Dress",
+      color: "Olive",
+      colorDir: "Cool",
+      season: "Winter/Autumn",
+      versatilityScore: 55,
+      outfitsCount: 3,
+      rarelyWorn: false,
+      isWishlist: false,
+      imageEmoji: "👗",
+      hexColor: "#5C6B5E"
+    },
+    {
+      id: "w_3",
+      name: "Deep charcoal wide-leg trouser",
+      category: "Bottom",
+      color: "Charcoal",
+      colorDir: "Neutral",
+      season: "Autumn/Winter",
+      versatilityScore: 92,
+      outfitsCount: 8,
+      rarelyWorn: false,
+      isWishlist: false,
+      imageEmoji: "👖",
+      hexColor: "#2C3E50"
+    },
+    {
+      id: "w_4",
+      name: "Oatmeal merino knit sweater",
+      category: "Top",
+      color: "Oatmeal",
+      colorDir: "Soft",
+      season: "Autumn/Winter",
+      versatilityScore: 78,
+      outfitsCount: 5,
+      rarelyWorn: false,
+      isWishlist: false,
+      imageEmoji: "🧶",
+      hexColor: "#CDB49E"
+    },
+    {
+      id: "w_5",
+      name: "White leather classic sneakers",
+      category: "Shoes",
+      color: "White",
+      colorDir: "Neutral",
+      season: "Spring/Summer",
+      versatilityScore: 95,
+      outfitsCount: 12,
+      rarelyWorn: false,
+      isWishlist: false,
+      imageEmoji: "👟",
+      hexColor: "#FFFFFF"
+    },
+    {
+      id: "w_6",
+      name: "Terracotta linen shirt",
+      category: "Top",
+      color: "Terracotta",
+      colorDir: "Warm",
+      season: "Summer",
+      versatilityScore: 68,
+      outfitsCount: 4,
+      rarelyWorn: false,
+      isWishlist: false,
+      imageEmoji: "👕",
+      hexColor: "#A87C66"
+    },
+    {
+      id: "w_7",
+      name: "Black leather saddle bag",
+      category: "Bag",
+      color: "Black",
+      colorDir: "Neutral",
+      season: "All seasons",
+      versatilityScore: 90,
+      outfitsCount: 9,
+      rarelyWorn: false,
+      isWishlist: false,
+      imageEmoji: "👜",
+      hexColor: "#111111"
+    },
+    {
+      id: "w_8",
+      name: "Gold chunky chain necklace",
+      category: "Accessory",
+      color: "Gold",
+      colorDir: "Contrast",
+      season: "All seasons",
+      versatilityScore: 88,
+      outfitsCount: 15,
+      rarelyWorn: false,
+      isWishlist: false,
+      imageEmoji: "👑",
+      hexColor: "#D4AF37"
+    },
+    {
+      id: "w_9",
+      name: "Pink silk slip skirt",
+      category: "Bottom",
+      color: "Pink",
+      colorDir: "Soft",
+      season: "Summer",
+      versatilityScore: 45,
+      outfitsCount: 2,
+      rarelyWorn: true,
+      isWishlist: false,
+      imageEmoji: "👗",
+      hexColor: "#FFC0CB"
+    },
+    {
+      id: "w_10",
+      name: "Neon green puffer jacket",
+      category: "Outerwear",
+      color: "Neon Green",
+      colorDir: "Contrast",
+      season: "Winter",
+      versatilityScore: 20,
+      outfitsCount: 1,
+      rarelyWorn: true,
+      isWishlist: false,
+      imageEmoji: "🧥",
+      hexColor: "#39FF14"
+    },
+    {
+      id: "w_11",
+      name: "Camel drape wool coat",
+      category: "Outerwear",
+      color: "Camel",
+      colorDir: "Warm",
+      season: "Autumn/Winter",
+      versatilityScore: 85,
+      outfitsCount: 7,
+      rarelyWorn: false,
+      isWishlist: true,
+      imageEmoji: "🧥",
+      hexColor: "#C19A6B"
+    },
+    {
+      id: "w_12",
+      name: "Suede leather loafers",
+      category: "Shoes",
+      color: "Suede Brown",
+      colorDir: "Soft",
+      season: "Spring/Autumn",
+      versatilityScore: 74,
+      outfitsCount: 5,
+      rarelyWorn: false,
+      isWishlist: true,
+      imageEmoji: "👞",
+      hexColor: "#8B5A2B"
+    }
+  ]);
+
+  const [selectedWardrobeItem, setSelectedWardrobeItem] = useState<any | null>(null);
+  const [wardrobeFilter, setWardrobeFilter] = useState("All");
+  const [showAddItemModal, setShowAddItemModal] = useState(false);
+
+  // New item form state
+  const [newItmName, setNewItmName] = useState("");
+  const [newItmCategory, setNewItmCategory] = useState<"Top" | "Bottom" | "Dress" | "Outerwear" | "Shoes" | "Bag" | "Accessory">("Top");
+  const [newItmColor, setNewItmColor] = useState("");
+  const [newItmColorDir, setNewItmColorDir] = useState<"Neutral" | "Warm" | "Cool" | "Soft" | "Contrast">("Neutral");
+  const [newItmWishlist, setNewItmWishlist] = useState(false);
+  const [newItmStyleRole, setNewItmStyleRole] = useState<"Core" | "Accent" | "Occasion">("Core");
+
 
   // --- SHOULD I BUY THIS / SHOPPING CHECK NEW STATE ---
   const [shoppingStep, setShoppingStep] = useState<"Input" | "Loading" | "Result">("Input");
@@ -473,6 +785,7 @@ export default function App() {
   const [creditBalance, setCreditBalance] = useState({ credits: 3, isPro: false });
   const [outfits, setOutfits] = useState(INITIAL_OUTFITS);
   const [savedLooks, setSavedLooks] = useState<{ id: string; title: string; color: string; date: string }[]>([]);
+  const [selectedDecisionForDetails, setSelectedDecisionForDetails] = useState<any | null>(null);
   
   // CONTROLLED SELECTORS FOR VISUAL BOARD (No free-text prompt as requested)
   const [selectedOccasion, setSelectedOccasion] = useState<"Everyday" | "Office" | "Date" | "Travel" | "Event">("Everyday");
@@ -533,6 +846,10 @@ export default function App() {
       setActiveCodeKey("settings");
     } else if (currentScreen === "shopping_check") {
       setActiveCodeKey("shoppingCheckScreen");
+    } else if (currentScreen === "wardrobe" || currentScreen === "item_detail") {
+      setActiveCodeKey("wardrobe");
+    } else if (currentScreen === "profile") {
+      setActiveCodeKey("models");
     }
   }, [currentScreen]);
 
@@ -1900,17 +2217,17 @@ export default function App() {
                                   }`}
                                 >
                                   🌱 {appLang === "EN" ? {
-                                    Basic: "Basic wardrobe piece",
-                                    Trend: "New fleeting trend",
-                                    Occasion: "Special event only",
-                                    Similar: "Similar to owned",
-                                    Unsure: "Unsure / Experimental"
+                                    Basic: "Basic wardrobe item",
+                                    Trend: "Trend item",
+                                    Occasion: "Occasion-only item",
+                                    Similar: "Similar to something I own",
+                                    Unsure: "Low-versatility item"
                                   }[ctx] : {
-                                    Basic: "Элемент базы",
-                                    Trend: "Сезонный тренд",
-                                    Occasion: "Только под событие",
-                                    Similar: "Уже есть похожее",
-                                    Unsure: "Пока не уверен"
+                                    Basic: "Базовая вещь",
+                                    Trend: "Трендовая вещь",
+                                    Occasion: "Вещь для редкого случая",
+                                    Similar: "Похожа на то, что уже есть",
+                                    Unsure: "Малополезная вещь"
                                   }[ctx]}
                                 </button>
                               ))}
@@ -2079,11 +2396,36 @@ export default function App() {
 
               {/* SCREEN 9: DECISIONS SCREEN */}
               {currentScreen === "decisions" && (
-                <div className="flex-1 p-5 flex flex-col justify-between overflow-y-auto animate-fade-in text-slate-800 text-left">
+                <div className="flex-1 p-5 flex flex-col justify-between overflow-y-auto animate-fade-in text-slate-800 text-left scrollbar-thin">
                   <div className="space-y-4">
                     <div>
                       <h2 className="text-md font-extrabold text-[#8D5B4C]">{s.historyTitle}</h2>
                       <p className="text-[10px] text-slate-400 mt-0.5">{s.historySubtitle}</p>
+                    </div>
+
+                    {/* Stats Panel */}
+                    <div className="bg-[#FAF5F2] border border-[#8D5B4C]/20 p-3 rounded-2xl space-y-1.5 shadow-xs">
+                      <span className="text-[9.5px] font-extrabold text-[#8D5B4C] tracking-wider uppercase block">
+                        📊 {appLang === "EN" ? "Interactive Wardrobe Statistics" : "Статистика сохраненных решений"}
+                      </span>
+                      <div className="text-[10px] text-slate-700 leading-normal space-y-1 font-medium">
+                        <div className="flex items-center gap-1.5">
+                          <CheckCircle className="h-3 w-3 text-emerald-500 shrink-0" />
+                          <span>
+                            {appLang === "EN" 
+                              ? "You skipped 2 low-versatility items." 
+                              : "Вы пропустили 2 малополезные вещи."}
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-1.5">
+                          <CheckCircle className="h-3 w-3 text-emerald-500 shrink-0" />
+                          <span>
+                            {appLang === "EN" 
+                              ? "3 saved buying decisions this week." 
+                              : "3 сохраненных решения о покупках за неделю."}
+                          </span>
+                        </div>
+                      </div>
                     </div>
 
                     <div className="space-y-2">
@@ -2097,9 +2439,9 @@ export default function App() {
                             </div>
                             <button 
                               onClick={() => setCurrentScreen("report")}
-                              className="bg-slate-100 text-slate-600 hover:bg-slate-200 font-bold px-2 py-1 rounded text-[9px]"
+                              className="bg-slate-100 text-[#8D5B4C] hover:bg-slate-200 font-bold px-2 py-1 rounded text-[9px]"
                             >
-                              Load
+                              {appLang === "EN" ? "View" : "Открыть"}
                             </button>
                           </div>
                         </div>
@@ -2118,7 +2460,7 @@ export default function App() {
                           {savedLooks.map(look => (
                             <div key={look.id} className="bg-white border border-slate-150 p-2 rounded-xl flex items-center justify-between text-slate-700 shadow-xs">
                               <div className="flex items-center gap-2">
-                                <div style={{ backgroundColor: look.color }} className="w-5.5 h-5.5 rounded" />
+                                <span className="text-base">🧥</span>
                                 <span className="text-[10px] font-semibold truncate max-w-[150px]">{look.title}</span>
                               </div>
                               <button 
@@ -2126,9 +2468,9 @@ export default function App() {
                                   setSavedLooks(prev => prev.filter(l => l.id !== look.id));
                                   setOutfits(prev => prev.map(o => o.id === look.id.replace("look_", "") ? { ...o, isSaved: false } : o));
                                 }}
-                                className="text-rose-600 text-[10px] font-bold hover:underline"
+                                className="text-rose-650 text-[10px] font-extrabold hover:underline"
                               >
-                                Delete
+                                {appLang === "EN" ? "Delete" : "Удалить"}
                               </button>
                             </div>
                           ))}
@@ -2141,45 +2483,67 @@ export default function App() {
                     </div>
 
                     {/* Shopping Checks History List */}
-                    <div className="space-y-2 pt-2 border-t border-slate-100">
+                    <div className="space-y-2 pt-2 border-t border-slate-150">
                       <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest block">
                         {appLang === "EN" ? "Shopping Checks" : "Проверки покупок"} ({shoppingHistory.length})
                       </span>
                       {shoppingHistory.length > 0 ? (
-                        <div className="space-y-1.5 max-h-[130px] overflow-y-auto pr-1">
+                        <div className="space-y-3 pr-1">
                           {shoppingHistory.map(item => (
-                            <div key={item.id} className="bg-white border border-slate-150 p-2.5 rounded-xl flex items-center justify-between text-slate-705 shadow-xs">
-                              <div>
-                                <div className="flex items-center gap-1.5">
-                                  <span className="text-[10px] font-bold text-slate-700">
-                                    {appLang === "EN" ? item.category : {
-                                      Top: "Верх", Bottom: "Низ", Dress: "Платье", Outerwear: "Куртка", Shoes: "Обувь", Bag: "Сумка", Accessory: "Очки"
-                                    }[item.category as any] || item.category}
-                                  </span>
-                                  <span className={`text-[8px] font-mono px-1.5 py-0.5 rounded-full font-bold uppercase ${
-                                    item.verdict === "Good match" 
-                                      ? "bg-emerald-50 text-emerald-800 border border-emerald-100" 
-                                      : item.verdict === "Maybe" 
-                                        ? "bg-amber-50 text-amber-800 border border-amber-100" 
-                                        : "bg-rose-50 text-rose-800 border border-rose-100"
-                                  }`}>
-                                    {item.verdict === "Good match" && (appLang === "EN" ? "Good" : "Да")}
-                                    {item.verdict === "Maybe" && (appLang === "EN" ? "Maybe" : "Возможно")}
-                                    {item.verdict === "Skip" && (appLang === "EN" ? "Skip" : "Нет")}
+                            <div key={item.id} className="bg-white border border-slate-200 p-3 rounded-2xl space-y-2.5 shadow-xs relative text-left">
+                              <div className="flex items-start justify-between">
+                                <div className="space-y-0.5">
+                                  <div className="flex items-center gap-1.5 flex-wrap">
+                                    <span className="text-[11.5px] font-bold text-slate-800">
+                                      {appLang === "EN" ? item.category : {
+                                        Top: "Верх", Bottom: "Низ", Dress: "Платье", Outerwear: "Верхняя одежда", Shoes: "Обувь", Bag: "Сумка", Accessory: "Аксессуар"
+                                      }[item.category as any] || item.category}
+                                    </span>
+                                    <span className="text-[8px] text-slate-400 font-medium">({item.date === "Today" ? (appLang === "EN" ? "Today" : "Сегодня") : item.date === "Yesterday" ? (appLang === "EN" ? "Yesterday" : "Вчера") : (appLang === "EN" ? "3 days ago" : "3 дня назад")})</span>
+                                  </div>
+                                  <span className="text-[8.5px] text-slate-400 block leading-none">
+                                    {appLang === "EN" ? "Context: " : "Тип: "} {appLang === "EN" ? item.context : {
+                                      Basic: "Базовая вещь", Trend: "Трендовая вещь", Occasion: "Вещь для редкого случая", Similar: "Похожа на то, что уже есть", Unsure: "Малополезная вещь"
+                                    }[item.context as any] || item.context}
                                   </span>
                                 </div>
-                                <span className="text-[8.5px] text-slate-400 block mt-0.5 leading-none">
-                                  {appLang === "EN" ? "Context: " : "Тип: "} {appLang === "EN" ? item.context : {
-                                    Basic: "Элемент базы", Trend: "Временный тренд", Occasion: "Особый случай", Similar: "Есть копия", Unsure: "Не уверен"
-                                  }[item.context as any] || item.context}
+
+                                <span className={`text-[8.5px] font-black px-2 py-0.5 rounded-md font-mono shrink-0 uppercase tracking-wide border ${
+                                  item.verdict === "Good match" 
+                                    ? "bg-emerald-50 text-emerald-800 border-emerald-200" 
+                                    : item.verdict === "Maybe" 
+                                      ? "bg-amber-50 text-amber-800 border-amber-200" 
+                                      : "bg-rose-50 text-rose-800 border-rose-200"
+                                }`}>
+                                  {item.verdict === "Good match" && (appLang === "EN" ? s.verdictGood : s.verdictGood)}
+                                  {item.verdict === "Maybe" && (appLang === "EN" ? "MAYBE" : s.verdictMaybe)}
+                                  {item.verdict === "Skip" && (appLang === "EN" ? s.verdictSkip : s.verdictSkip)}
                                 </span>
                               </div>
-                              <button 
-                                onClick={() => setShoppingHistory(prev => prev.filter(h => h.id !== item.id))}
-                                className="text-rose-600 text-[9.5px] font-bold hover:underline"
-                              >
-                                {appLang === "EN" ? "Delete" : "Удалить"}
-                              </button>
+
+                              <p className="text-[10px] text-slate-600 leading-relaxed italic bg-slate-50 p-2 rounded-lg">
+                                "{appLang === "EN" ? item.reasonEn : item.reasonRu}"
+                              </p>
+
+                              <div className="flex items-center justify-between text-[9px] text-[#8D5B4C] font-semibold border-t border-slate-100 pt-2 bg-white grow flex-wrap gap-1.5">
+                                <span className="font-mono">
+                                  ⚡ {appLang === "EN" ? `Creates up to ${item.outfitsCount} outfits` : `Создает до ${item.outfitsCount} образов`}
+                                </span>
+                                <div className="flex items-center gap-2">
+                                  <button 
+                                    onClick={() => setSelectedDecisionForDetails(item)}
+                                    className="text-slate-500 hover:text-slate-800 underline font-extrabold uppercase text-[8.5px] tracking-wider"
+                                  >
+                                    {appLang === "EN" ? "Details" : "Инфо"}
+                                  </button>
+                                  <button 
+                                    onClick={() => setShoppingHistory(prev => prev.filter(h => h.id !== item.id))}
+                                    className="text-rose-600 hover:underline font-extrabold uppercase text-[8.5px] tracking-wider"
+                                  >
+                                    {appLang === "EN" ? "Delete" : "Удалить"}
+                                  </button>
+                                </div>
+                              </div>
                             </div>
                           ))}
                         </div>
@@ -2317,11 +2681,646 @@ export default function App() {
                 </div>
               )}
 
+              {/* SCREEN 11: MY WARDROBE SCREEN */}
+              {currentScreen === "wardrobe" && (
+                <div className="flex-1 p-5 flex flex-col justify-between overflow-y-auto animate-fade-in text-slate-800 text-left scrollbar-thin">
+                  <div className="space-y-4">
+                    {/* Header with stats counters */}
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <h2 className="text-md font-extrabold text-[#8D5B4C]">{s.wardrobeTitle}</h2>
+                        <p className="text-[10px] text-slate-400 mt-0.5">
+                          {appLang === "EN" 
+                            ? `${wardrobeItems.filter(i => !i.isWishlist).length} active items · ${wardrobeItems.filter(i => i.isWishlist).length} wishlist gaps`
+                            : `${wardrobeItems.filter(i => !i.isWishlist).length} активных вещей · ${wardrobeItems.filter(i => i.isWishlist).length} в списке желаний`}
+                        </p>
+                      </div>
+                      <button 
+                        onClick={() => setShowAddItemModal(true)}
+                        className="bg-[#8D5B4C] text-white hover:bg-[#8D5B4C]/95 font-bold px-3 py-1.5 rounded-xl text-[10px] shadow-xs flex items-center gap-1"
+                      >
+                        <span>+</span> {appLang === "EN" ? "Add Item" : "Добавить"}
+                      </button>
+                    </div>
+
+                    {/* Filters bar */}
+                    <div className="flex gap-2.5 overflow-x-auto pb-1 scrollbar-none text-[9.5px] font-bold">
+                      {["All", "Top", "Bottom", "Dress", "Outerwear", "Shoes", "Bag", "Accessory", "Rarely Worn", "Wishlist"].map(cat => {
+                        const isSelected = wardrobeFilter === cat;
+                        return (
+                          <button
+                            key={cat}
+                            onClick={() => setWardrobeFilter(cat)}
+                            className={`px-3 py-1 rounded-full whitespace-nowrap transition border ${
+                              isSelected
+                                ? "bg-[#8D5B4C] border-[#8D5B4C] text-white"
+                                : "bg-white border-slate-200 text-slate-600 hover:border-slate-300"
+                            }`}
+                          >
+                            {appLang === "EN" ? cat : {
+                              All: "Все", Top: "Верх", Bottom: "Низ", Dress: "Платья", Outerwear: "Верхняя одежда", Shoes: "Обувь", Bag: "Сумки", Accessory: "Аксессуары", "Rarely Worn": "Редкие вещи", Wishlist: "Желания"
+                            }[cat] || cat}
+                          </button>
+                        );
+                      })}
+                    </div>
+
+                    {/* Wardrobe Grid */}
+                    {(() => {
+                      const filtered = wardrobeItems.filter(item => {
+                        if (wardrobeFilter === "All") return true;
+                        if (wardrobeFilter === "Rarely Worn") return item.rarelyWorn === true;
+                        if (wardrobeFilter === "Wishlist") return item.isWishlist === true;
+                        return item.category === wardrobeFilter;
+                      });
+
+                      if (filtered.length === 0) {
+                        return (
+                          <div className="bg-slate-50 border border-slate-200 border-dashed p-6 text-center rounded-2xl space-y-2 mt-4">
+                            <Archive className="h-8 w-8 text-slate-300 mx-auto" />
+                            <h3 className="text-xs font-bold text-slate-600">
+                              {appLang === "EN" ? "No items match your category" : "Нет вещей в этой категории"}
+                            </h3>
+                            <p className="text-[9.5px] text-slate-400">
+                              {appLang === "EN" ? "Try selecting a different filter or create items manually." : "Выберите другой фильтр или добавьте новую вещь."}
+                            </p>
+                          </div>
+                        );
+                      }
+
+                      return (
+                        <div className="grid grid-cols-2 gap-3 mt-1">
+                          {filtered.map(item => {
+                            return (
+                              <div
+                                key={item.id}
+                                onClick={() => {
+                                  setSelectedWardrobeItem(item);
+                                  setCurrentScreen("item_detail");
+                                }}
+                                className="bg-white border border-slate-200 rounded-2xl p-3 flex flex-col justify-between hover:border-[#8D5B4C]/45 transition cursor-pointer shadow-xs select-none relative group"
+                              >
+                                {item.isWishlist && (
+                                  <span className="absolute top-2 right-2 bg-amber-500/10 text-amber-700 text-[7px] font-black px-1.5 py-0.5 rounded uppercase border border-amber-500/20 font-mono">
+                                    {appLang === "EN" ? "Wishlist" : "В вишлисте"}
+                                  </span>
+                                )}
+                                {item.rarelyWorn && (
+                                  <span className="absolute top-2 right-2 bg-rose-50 text-rose-600 text-[7px] font-bold px-1.5 py-0.5 rounded uppercase border border-rose-250 font-mono">
+                                    ⚠️ {appLang === "EN" ? "Unused" : "Неизвестная ценность"}
+                                  </span>
+                                )}
+                                <div className="space-y-2">
+                                  {/* Thumbnail placeholder with matching hex color */}
+                                  <div className="w-full h-20 rounded-xl flex items-center justify-center text-4xl shadow-xxs border border-slate-100" style={{ backgroundColor: `${item.hexColor}25` }}>
+                                    <span>{item.imageEmoji}</span>
+                                  </div>
+                                  <div className="space-y-0.5 text-left">
+                                    <span className="text-[10px] font-extrabold text-[#8D5B4C] uppercase tracking-wider block font-mono">
+                                      {appLang === "EN" ? item.category : {
+                                        Top: "Верх", Bottom: "Низ", Dress: "Платье", Outerwear: "Верхняя одежда", Shoes: "Обувь", Bag: "Саквояж", Accessory: "Украшение"
+                                      }[item.category] || item.category}
+                                    </span>
+                                    <h3 className="text-[11.5px] font-extrabold text-slate-800 tracking-tight leading-tight line-clamp-1 group-hover:text-[#8D5B4C]">
+                                      {item.name}
+                                    </h3>
+                                    <div className="flex items-center gap-1 mt-1 text-[8px] font-mono text-slate-450">
+                                      <span className="inline-block w-1.5 h-1.5 rounded-full" style={{ backgroundColor: item.hexColor }}></span>
+                                      <span>{item.color} · Score {item.versatilityScore}</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      );
+                    })()}
+                  </div>
+                </div>
+              )}
+
+              {/* SCREEN 12: WARDROBE ITEM DETAIL SCREEN */}
+              {currentScreen === "item_detail" && selectedWardrobeItem && (
+                <div className="flex-1 p-5 flex flex-col justify-between overflow-y-auto animate-fade-in text-slate-800 text-left scrollbar-thin">
+                  <div className="space-y-4">
+                    {/* Header bar */}
+                    <div className="flex items-center gap-2 pb-2 border-b border-rose-100/30">
+                      <button 
+                        onClick={() => {
+                          setSelectedWardrobeItem(null);
+                          setCurrentScreen("wardrobe");
+                        }}
+                        className="p-1 rounded-lg text-slate-500 hover:text-slate-800 bg-slate-100"
+                      >
+                        <ChevronLeft className="h-4 w-4" />
+                      </button>
+                      <div>
+                        <h2 className="text-sm font-extrabold text-slate-800 leading-tight">{s.itemDetailTitle}</h2>
+                        <span className="text-[9px] font-mono text-[#8D5B4C] uppercase font-black">{selectedWardrobeItem.name}</span>
+                      </div>
+                    </div>
+
+                    {/* Card Layout Banner */}
+                    <div className="bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center gap-3 relative shadow-xs text-center">
+                      <div className="absolute top-3 left-3 flex items-center gap-1 text-[8.5px] font-mono text-slate-450 bg-slate-50 px-2 py-0.5 rounded-md border border-slate-150">
+                        <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ backgroundColor: selectedWardrobeItem.hexColor }}></span>
+                        <span>{selectedWardrobeItem.color}</span>
+                      </div>
+                      <div className="absolute top-3 right-3">
+                        <span className={`text-[8px] font-black font-mono border px-2 py-0.5 rounded-md uppercase tracking-wider ${
+                          selectedWardrobeItem.versatilityScore >= 80 
+                            ? "bg-emerald-50 text-emerald-600 border-emerald-250" 
+                            : selectedWardrobeItem.versatilityScore >= 50 
+                              ? "bg-amber-50 text-amber-600 border-amber-250" 
+                              : "bg-rose-50 text-rose-600 border-rose-250"
+                        }`}>
+                          Score {selectedWardrobeItem.versatilityScore}
+                        </span>
+                      </div>
+
+                      <div className="w-24 h-24 rounded-2xl flex items-center justify-center text-6xl shadow-xxs border border-slate-100 mt-3" style={{ backgroundColor: `${selectedWardrobeItem.hexColor}25` }}>
+                        <span>{selectedWardrobeItem.imageEmoji}</span>
+                      </div>
+
+                      <div className="space-y-1">
+                        <span className="text-[9px] font-mono text-[#8D5B4C] uppercase tracking-widest font-extrabold block">
+                          Category: {selectedWardrobeItem.category}
+                        </span>
+                        <h3 className="text-md font-extrabold text-slate-800 tracking-tight leading-snug">
+                          {selectedWardrobeItem.name}
+                        </h3>
+                        <p className="text-[9px] text-slate-450">
+                          {appLang === "EN" ? `Suggested temperature: ${selectedWardrobeItem.colorDir} / Recommended Season: ${selectedWardrobeItem.season}` : `Совместимость оттенков: ${selectedWardrobeItem.colorDir === "Warm" ? "Теплая палитра" : selectedWardrobeItem.colorDir === "Cool" ? "Холодная палитра" : "Нейтральная палитра"} / Сезон: ${selectedWardrobeItem.season}`}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Synergy stats list */}
+                    <div className="bg-[#FAF5F2] border border-[#8D5B4C]/20 rounded-2xl p-4 text-left shadow-xs space-y-3">
+                      <span className="text-[9px] font-extrabold text-[#8D5B4C] tracking-widest uppercase block mb-1">
+                        🌟 {appLang === "EN" ? "Style Evaluation Matrix" : "Матрица оценки стиля"}
+                      </span>
+                      <div className="space-y-2.5 text-[10px] text-slate-700 leading-normal font-medium">
+                        <div className="flex gap-2">
+                          <span className="text-emerald-600 shrink-0 font-bold">✓</span>
+                          <div>
+                            <strong className="text-slate-800 block text-[10.5px]">
+                              {appLang === "EN" ? "Aesthetic Compatibility" : "Совместимость с гардеробом"}
+                            </strong>
+                            <p className="text-[9px] text-slate-500">
+                              {selectedWardrobeItem.versatilityScore >= 80 
+                                ? (appLang === "EN" ? "High-performance wardrobe component. Links natively to more than 6 active styles." : "Высокоэффективный компонент. Совместим с большинством вещей в шкафу.")
+                                : (appLang === "EN" ? "Trend component. Recommended to wear in specialized combinations." : "Трендовый элемент. Рекомендуется носить в точечных сочетаниях.")}
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex gap-2 pt-2 border-t border-dashed border-slate-200">
+                          <span className="text-[#8D5B4C] shrink-0 font-bold">💎</span>
+                          <div>
+                            <strong className="text-slate-800 block text-[10.5px]">
+                              {appLang === "EN" ? "Wardrobe Role Type" : "Роль в гардеробе"}
+                            </strong>
+                            <div className="flex gap-1.5 mt-1">
+                              {selectedWardrobeItem.versatilityScore >= 80 ? (
+                                <span className="bg-emerald-50 text-emerald-700 text-[8px] font-bold px-2 py-0.5 rounded border border-emerald-200">
+                                  {s.roleCore}
+                                </span>
+                              ) : selectedWardrobeItem.isWishlist ? (
+                                <span className="bg-amber-50 text-amber-700 text-[8px] font-bold px-2 py-0.5 rounded border border-amber-200">
+                                  {s.roleDuplicate}
+                                </span>
+                              ) : (
+                                <span className="bg-rose-50 text-rose-700 text-[8px] font-bold px-2 py-0.5 rounded border border-[#8D5B4C]/20">
+                                  {s.roleAccent}
+                                </span>
+                              )}
+                              {selectedWardrobeItem.rarelyWorn && (
+                                <span className="bg-red-50 text-red-700 text-[8px] font-bold px-2 py-0.5 rounded border border-red-200">
+                                  {s.roleUnused}
+                                </span>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="flex gap-2 pt-2 border-t border-dashed border-slate-200">
+                          <span className="text-[#8D5B4C] shrink-0 font-bold">📋</span>
+                          <div>
+                            <strong className="text-slate-800 block text-[10.5px]">
+                              {s.outfitFormulasTitle}
+                            </strong>
+                            <p className="text-[9px] text-slate-500 italic mt-0.5">
+                              {appLang === "EN" 
+                                ? `Formula: 1. ${selectedWardrobeItem.name} + Clean Straight denim + White Sneakers` 
+                                : `Формула: 1. ${selectedWardrobeItem.name} + Прямой деним + Светлая обувь`}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Smart Suggestion Decision list */}
+                    <div className="bg-slate-50 border border-slate-200 p-3.5 rounded-2xl flex items-start gap-2.5 text-left text-slate-650">
+                      <Lock className="h-4 w-4 text-slate-400 shrink-0 mt-0.5" />
+                      <div>
+                        <span className="text-[10px] font-extrabold text-slate-700 uppercase tracking-wide block">
+                          {s.decisionLabelSet}
+                        </span>
+                        <div className="flex gap-1.5 flex-wrap mt-2">
+                          {["Keep", "Replace", "Archive", "Wish"].map(act => {
+                            const isKeep = act === "Keep" && !selectedWardrobeItem.rarelyWorn && !selectedWardrobeItem.isWishlist;
+                            const isReplace = act === "Replace" && selectedWardrobeItem.rarelyWorn;
+                            const isArchive = act === "Archive" && selectedWardrobeItem.rarelyWorn;
+                            const isWish = act === "Wish" && selectedWardrobeItem.isWishlist;
+                            const isActive = isKeep || isReplace || isArchive || isWish;
+                            return (
+                              <button
+                                key={act}
+                                className={`text-[8px] font-bold px-2.5 py-1 rounded-full border ${
+                                  isActive
+                                    ? "bg-[#8D5B4C] text-white border-[#8D5B4C]"
+                                    : "bg-white border-slate-200 text-slate-500"
+                                }`}
+                              >
+                                {act === "Keep" ? s.descKeep : act === "Replace" ? s.descReplace : act === "Archive" ? s.descSell : s.descWish}
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Delete item button */}
+                    <button
+                      onClick={() => {
+                        setWardrobeItems(prev => prev.filter(i => i.id !== selectedWardrobeItem.id));
+                        setSelectedWardrobeItem(null);
+                        setCurrentScreen("wardrobe");
+                        setSettingsFeedback(appLang === "EN" ? "Garment discarded from physical wardrobe list." : "Предмет исключен из вашего гардероба.");
+                        setTimeout(() => setSettingsFeedback(null), 3500);
+                      }}
+                      className="w-full border border-rose-300 hover:bg-rose-50 text-rose-750 text-[10px] font-bold py-2 px-3 rounded-xl transition flex items-center justify-center gap-1.5 mt-2"
+                    >
+                      <Trash2 className="h-3.5 w-3.5" />
+                      {s.deleteItemBtn}
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* SCREEN 13: STYLE RULE SYSTEM (PROFILE) SCREEN */}
+              {currentScreen === "profile" && (
+                <div className="flex-1 p-5 flex flex-col justify-between overflow-y-auto animate-fade-in text-slate-800 text-left scrollbar-thin">
+                  <div className="space-y-4">
+                    {/* Header bar */}
+                    <div>
+                      <h2 className="text-md font-extrabold text-[#8D5B4C]">{s.profileTitle}</h2>
+                      <p className="text-[10px] text-slate-400 mt-0.5">{s.historySubtitle}</p>
+                    </div>
+
+                    {/* User Profile Status Badge Header */}
+                    <div className="bg-white border border-slate-200 p-4 rounded-2xl flex items-center justify-between shadow-xs">
+                      <div className="flex items-center gap-2.5">
+                        <div className="w-9 h-9 bg-[#8D5B4C]/10 text-[#8D5B4C] rounded-lg flex items-center justify-center text-lg shrink-0 font-bold font-mono">
+                          SA
+                        </div>
+                        <div>
+                          <h3 className="text-xs font-black text-slate-800">Style Profile</h3>
+                          <span className={`text-[8.5px] font-bold font-mono uppercase tracking-wide flex items-center gap-1 leading-none mt-1 ${
+                            hasGeneratedReport ? "text-emerald-600" : "text-amber-600"
+                          }`}>
+                            <span className="w-1.5 h-1.5 rounded-full inline-block animate-pulse" style={{ backgroundColor: hasGeneratedReport ? "#10B981" : "#F59E0B" }}></span>
+                            {hasGeneratedReport ? s.completedStatusReady : s.completedStatusNotReady}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="text-right">
+                        <span className="text-[8px] font-bold text-slate-440 font-mono tracking-widest block leading-none">VERSION</span>
+                        <strong className="text-[11px] font-mono text-slate-700 font-black block mt-1">v1.2-Smart</strong>
+                      </div>
+                    </div>
+
+                    {/* Content depends on hasGeneratedReport */}
+                    {hasGeneratedReport ? (
+                      <div className="space-y-4">
+                        {/* Interactive Seasonal Palette Rules */}
+                        <div className="bg-white border border-slate-200 p-4 rounded-2xl space-y-3 text-slate-700 shadow-xs">
+                          <span className="text-[9px] font-extrabold text-[#8D5B4C] tracking-wider uppercase block border-b border-rose-50 pb-1">
+                            🎨 {appLang === "EN" ? "Seasonal Color Rules" : "Правила сезонной палитры"}
+                          </span>
+                          <div className="grid grid-cols-2 gap-2 text-[9.5px]">
+                            <div className="bg-slate-50 p-2.5 rounded-xl border border-slate-100">
+                              <span className="text-slate-400 block font-mono text-[8px] leading-none mb-1">RECOMMENDED SEASON</span>
+                              <strong className="text-slate-700 font-bold block">Soft Autumn (Мягкая Осень)</strong>
+                            </div>
+                            <div className="bg-slate-50 p-2.5 rounded-xl border border-slate-100">
+                              <span className="text-slate-400 block font-mono text-[8px] leading-none mb-1">COLOR TEMPERATURE</span>
+                              <strong className="text-[#8D5B4C] font-bold block">Neutral Warm (Нейтрально-теплая)</strong>
+                            </div>
+                          </div>
+
+                          <div className="space-y-2 pt-1">
+                            <h4 className="text-[10px] font-extrabold text-[#8D5B4C]">{s.primaryColorsLabel}</h4>
+                            <div className="flex gap-1.5 flex-wrap">
+                              {["#8D5B4C", "#CDB49E", "#E6D5C3", "#5C6B5E", "#3A4D39", "#A87C66"].map(c => (
+                                <div key={c} className="flex flex-col items-center gap-1 group">
+                                  <div className="w-6 h-6 rounded-lg shadow-xxs border border-slate-200 transition-all group-hover:scale-105" style={{ backgroundColor: c }}></div>
+                                  <span className="text-[6.5px] font-mono font-bold text-slate-400 uppercase tracking-tighter">{c}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+
+                          <div className="space-y-2 pt-1">
+                            <h4 className="text-[10px] font-extrabold text-amber-700">{s.colorsCarefullyLabel}</h4>
+                            <div className="flex gap-1.5 flex-wrap">
+                              {["#39FF14", "#FF007F", "#00FFFF"].map(c => (
+                                <span key={c} className="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg bg-rose-50 border border-rose-200/50 text-[8.5px] font-mono text-rose-700">
+                                  <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ backgroundColor: c }}></span>
+                                  {c === "#39FF14" ? (appLang === "EN" ? "Neons" : "Неоны") : c === "#FF007F" ? (appLang === "EN" ? "Hot Pink" : "Фуксия") : (appLang === "EN" ? "Cyan" : "Синий циан")}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Silhouette and cut rules */}
+                        <div className="bg-white border border-slate-200 p-4 rounded-2xl space-y-2.5 text-slate-705 shadow-xs text-left">
+                          <span className="text-[9px] font-extrabold text-[#8D5B4C] tracking-wider uppercase block border-b border-rose-50 pb-1">
+                            📏 {s.silhouetteRulesTitle}
+                          </span>
+                          <div className="text-[10px] leading-relaxed space-y-1.5 font-medium text-slate-650">
+                            <div className="flex items-start gap-2">
+                              <span className="text-emerald-600 font-bold shrink-0 mt-0.5">✓</span>
+                              <span>{appLang === "EN" ? "Opt for Fluid drape lines and high-rise structures" : "Рекомендуются плавные линии кроя и высокая посадка"}</span>
+                            </div>
+                            <div className="flex items-start gap-2">
+                              <span className="text-emerald-600 font-bold shrink-0 mt-0.5">✓</span>
+                              <span>{appLang === "EN" ? "Incorporate tailored open blazers to align body coordinates" : "Структурированные жакеты поддерживают линию плеч"}</span>
+                            </div>
+                            <div className="flex items-start gap-2">
+                              <span className="text-emerald-600 font-bold shrink-0 mt-0.5">✓</span>
+                              <span>{appLang === "EN" ? "Prefer boatnecks and wide lapel structures" : "Вырез лодочкой и воротники с отворотами гармоничны"}</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Interactive Smart Shopping Rules */}
+                        <div className="bg-[#FAF5F2] border border-[#8D5B4C]/20 p-4 rounded-2xl space-y-2.5 text-slate-700 shadow-xs text-left">
+                          <span className="text-[9px] font-extrabold text-[#8D5B4C] tracking-wider uppercase block border-b border-slate-200 pb-1">
+                            🛡️ {s.shoppingRulesTitle}
+                          </span>
+                          <ul className="text-[9.5px] leading-relaxed space-y-2 font-medium text-slate-700">
+                            <li className="flex items-start gap-1.5">
+                              <strong className="text-[#8D5B4C] font-black shrink-0 font-mono">01/</strong>
+                              <span>{s.rule1}</span>
+                            </li>
+                            <li className="flex items-start gap-1.5">
+                              <strong className="text-[#8D5B4C] font-black shrink-0 font-mono">02/</strong>
+                              <span>{s.rule2}</span>
+                            </li>
+                            <li className="flex items-start gap-1.5">
+                              <strong className="text-[#8D5B4C] font-black shrink-0 font-mono">03/</strong>
+                              <span>{s.rule3}</span>
+                            </li>
+                            <li className="flex items-start gap-1.5">
+                              <strong className="text-[#8D5B4C] font-black shrink-0 font-mono">04/</strong>
+                              <span>{s.rule4}</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="bg-slate-50 border border-slate-200 border-dashed p-6 rounded-2xl text-center space-y-3 text-slate-650 mt-2">
+                        <Palette className="h-8 w-8 text-slate-300 mx-auto" />
+                        <h3 className="text-xs font-bold text-slate-700">
+                          {appLang === "EN" ? "No style rules generated yet" : "Правила стиля пока отсутствуют"}
+                        </h3>
+                        <p className="text-[9.5px] text-slate-450 leading-relaxed px-4">
+                          {s.noProfileDataText}
+                        </p>
+                        <button 
+                          onClick={() => setCurrentScreen("upload")}
+                          className="bg-[#8D5B4C] text-white hover:bg-[#8D5B4C]/95 font-bold py-1.5 px-4 rounded-xl text-[10px] shadow-xxs transition-all mt-2"
+                        >
+                          + {appLang === "EN" ? "Generate now" : "Сгенерировать правила"}
+                        </button>
+                      </div>
+                    )}
+
+                    {/* App Settings, Reset Controls & language within profile view */}
+                    <div className="bg-white border border-slate-200 p-4 rounded-2xl space-y-3.5 shadow-xs text-left">
+                      <span className="text-[9px] font-extrabold text-[#111] tracking-wider uppercase block border-b border-slate-100 pb-1">
+                        🛠️ {appLang === "EN" ? "System Controls & Privacy" : "Управление приватностью"}
+                      </span>
+
+                      {/* Language selection switches inside Profile screen */}
+                      <div className="flex justify-between items-center text-xs">
+                        <span className="font-bold text-slate-700">{s.settingsLanguageSection}</span>
+                        <div className="flex gap-1.5 bg-slate-100 p-0.5 rounded-lg border">
+                          {["EN", "RU"].map(lang => (
+                            <button
+                              key={lang}
+                              onClick={() => setAppLang(lang as any)}
+                              className={`px-3 py-1 font-mono text-[9.5px] font-extrabold rounded-md transition-all ${
+                                appLang === lang 
+                                  ? "bg-white text-slate-800 shadow-xxs" 
+                                  : "text-slate-450 hover:text-slate-700"
+                              }`}
+                            >
+                              {lang}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Action buttons list */}
+                      <div className="grid grid-cols-1 gap-2 pt-1 text-[9px] font-bold">
+                        <button 
+                          onClick={handleWipeStyleDataOnly}
+                          className="w-full bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-600 py-1.5 px-3 rounded-lg text-left transition flex items-center justify-between"
+                        >
+                          <span>{s.settingsBtnWipeLooks}</span>
+                          <span className="text-slate-400 font-normal">→</span>
+                        </button>
+
+                        <button 
+                          onClick={handleResetAppOnboardingOnly}
+                          className="w-full bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-600 py-1.5 px-3 rounded-lg text-left transition flex items-center justify-between"
+                        >
+                          <span>{s.settingsBtnResetOnboarding}</span>
+                          <span className="text-slate-400 font-normal">→</span>
+                        </button>
+
+                        <button 
+                          onClick={handleFullReset}
+                          className="w-full bg-rose-50 hover:bg-rose-100/50 border border-rose-200 text-rose-700 py-1.5 px-3 rounded-lg text-left transition flex items-center justify-between"
+                        >
+                          <span>{s.settingsBtnWipeAll}</span>
+                          <Trash2 className="h-3 w-3 text-rose-450" />
+                        </button>
+                      </div>
+
+                      {/* Toast report triggers */}
+                      {settingsFeedback && (
+                        <div className="bg-emerald-50 border border-emerald-250 text-emerald-750 p-2 text-[9px] rounded-lg text-center font-bold animate-fade-in leading-snug">
+                          {settingsFeedback}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* ADD WARDROBE ITEM MODAL OVERLAY */}
+              {showAddItemModal && (
+                <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-5 z-40 select-none animate-fade-in">
+                  <div className="bg-white border border-[#8D5B4C]/20 w-full max-w-xs rounded-2xl p-4 text-left shadow-2xl relative animate-scale-up text-slate-800">
+                    <div className="flex justify-between items-center pb-2 border-b border-rose-100/20">
+                      <h3 className="text-xs font-black text-[#8D5B4C] uppercase tracking-wider">{s.addManualTitle}</h3>
+                      <button 
+                        onClick={() => setShowAddItemModal(false)}
+                        className="p-1 text-slate-400 hover:text-slate-605 rounded-lg"
+                      >
+                        <X className="h-4 w-4" />
+                      </button>
+                    </div>
+
+                    <form 
+                      onSubmit={(e) => {
+                        e.preventDefault();
+                        if (!newItmName.trim()) return;
+
+                        const generatedId = `w_custom_${Date.now()}`;
+                        const randomScores = [72, 78, 81, 85, 90, 93];
+                        const randomScore = randomScores[Math.floor(Math.random() * randomScores.length)];
+                        const emojiMap = {
+                          Top: "👕", Bottom: "👖", Dress: "👗", Outerwear: "🧥", Shoes: "👟", Bag: "👜", Accessory: "👑"
+                        };
+                        const hexMap = {
+                          Top: "#8D5B4C", Bottom: "#2C3E50", Dress: "#5C6B5E", Outerwear: "#E6D5C3", Shoes: "#FFFFFF", Bag: "#111111", Accessory: "#D4AF37"
+                        };
+
+                        const newItem = {
+                          id: generatedId,
+                          name: newItmName,
+                          category: newItmCategory,
+                          color: newItmColor || (appLang === "EN" ? "Selected Shade" : "Выбранный оттенок"),
+                          colorDir: newItmColorDir,
+                          season: appLang === "EN" ? "All-season" : "Всесезонная",
+                          versatilityScore: randomScore,
+                          outfitsCount: Math.floor(randomScore / 10),
+                          rarelyWorn: false,
+                          isWishlist: newItmWishlist,
+                          imageEmoji: emojiMap[newItmCategory] || "👕",
+                          hexColor: hexMap[newItmCategory] || "#8D5B4C"
+                        };
+
+                        setWardrobeItems(prev => [newItem, ...prev]);
+                        setShowAddItemModal(false);
+
+                        // clear inputs
+                        setNewItmName("");
+                        setNewItmColor("");
+                        setNewItmWishlist(false);
+
+                        setSettingsFeedback(appLang === "EN" ? "Custom item created safely inside physical local wardrobe cache!" : "Новая вещь добавлена в физическую базу вашего гардероба!");
+                        setTimeout(() => setSettingsFeedback(null), 3000);
+                      }}
+                      className="space-y-3 mt-3 text-slate-700 text-[10px]"
+                    >
+                      <div>
+                        <label className="block text-[8px] font-bold text-slate-450 uppercase mb-1">Item Title</label>
+                        <input 
+                          type="text"
+                          value={newItmName}
+                          onChange={(e) => setNewItmName(e.target.value)}
+                          placeholder={s.itemNamePlaceholder}
+                          required
+                          className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-[#8D5B4C] text-[10px] text-slate-800"
+                        />
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-2">
+                        <div>
+                          <label className="block text-[8px] font-bold text-slate-450 uppercase mb-1">Category</label>
+                          <select
+                            value={newItmCategory}
+                            onChange={(e) => setNewItmCategory(e.target.value as any)}
+                            className="w-full px-2 py-1.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-[#8D5B4C] text-[9.5px]"
+                          >
+                            {["Top", "Bottom", "Dress", "Outerwear", "Shoes", "Bag", "Accessory"].map(cat => (
+                              <option key={cat} value={cat}>{cat}</option>
+                            ))}
+                          </select>
+                        </div>
+
+                        <div>
+                          <label className="block text-[8px] font-bold text-slate-450 uppercase mb-1">Color Shade</label>
+                          <input
+                            type="text"
+                            value={newItmColor}
+                            onChange={(e) => setNewItmColor(e.target.value)}
+                            placeholder={s.itemColorPlaceholder}
+                            className="w-full px-2 py-1.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-[#8D5B4C] text-[9.5px] text-slate-805"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-2">
+                        <div>
+                          <label className="block text-[8px] font-bold text-slate-450 uppercase mb-1">Color Dir</label>
+                          <select
+                            value={newItmColorDir}
+                            onChange={(e) => setNewItmColorDir(e.target.value as any)}
+                            className="w-full px-2 py-1.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-[#8D5B4C] text-[9.5px]"
+                          >
+                            {["Neutral", "Warm", "Cool", "Soft", "Contrast"].map(dir => (
+                              <option key={dir} value={dir}>{dir}</option>
+                            ))}
+                          </select>
+                        </div>
+
+                        <div className="flex flex-col justify-end">
+                          <label className="flex items-center gap-1.5 font-bold text-slate-600 select-none py-1.5 cursor-pointer">
+                            <input 
+                              type="checkbox"
+                              checked={newItmWishlist}
+                              onChange={(e) => setNewItmWishlist(e.target.checked)}
+                              className="rounded text-[#8D5B4C] focus:ring-[#8D5B4C] h-3.5 w-3.5 border-slate-250 cursor-pointer"
+                            />
+                            <span>{appLang === "EN" ? "Wishlist Gap" : "В вишлист"}</span>
+                          </label>
+                        </div>
+                      </div>
+
+                      <div className="flex gap-2 pt-2 border-t border-rose-100/10">
+                        <button
+                          type="button"
+                          onClick={() => setShowAddItemModal(false)}
+                          className="w-1/2 border border-slate-200 hover:bg-slate-50 text-slate-650 font-bold py-2 rounded-xl text-[10px] text-center"
+                        >
+                          {s.addManualCloseBtn}
+                        </button>
+                        <button
+                          type="submit"
+                          className="w-1/2 bg-[#8D5B4C] hover:bg-[#8D5B4C]/95 text-white font-bold py-2 rounded-xl text-[10px] text-center"
+                        >
+                          {s.addManualSubmitBtn}
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              )}
+
             </div>
 
             {/* ANDROID DEVICE BOTTOM NAV BAR STRIP */}
-            {onboardingCompleted && ["home", "upload", "report", "looks", "decisions", "settings", "paywall", "shopping_check"].includes(currentScreen) && (
-              <div className={`py-2 px-4 shadow-2xl border-t select-none z-30 shrink-0 ${
+            {onboardingCompleted && ["home", "upload", "report", "looks", "decisions", "settings", "paywall", "shopping_check", "wardrobe", "profile", "item_detail"].includes(currentScreen) && (
+              <div className={`py-2 px-3 shadow-2xl border-t select-none z-30 shrink-0 ${
                 simulatorThemeMode === "light" 
                   ? "bg-white text-slate-600 border-slate-200" 
                   : "bg-[#1f1f1f] text-slate-300 border-[#2b2b2a]"
@@ -2329,15 +3328,23 @@ export default function App() {
                 <div className="flex justify-around items-center">
                   <button 
                     onClick={() => setCurrentScreen("home")}
-                    className={`flex flex-col items-center gap-0.5 px-3 py-1 text-slate-400 transition hover:text-[#8D5B4C] ${currentScreen === "home" ? "text-[#8D5B4C] font-bold" : "opacity-90"}`}
+                    className={`flex flex-col items-center gap-0.5 px-2 py-1 text-slate-400 transition hover:text-[#8D5B4C] ${currentScreen === "home" ? "text-[#8D5B4C] font-bold" : "opacity-90"}`}
                   >
                     <Home className="h-4 w-4" />
                     <span className="text-[8.5px] font-bold">{appLang === "EN" ? "Home" : "Главная"}</span>
                   </button>
 
                   <button 
+                    onClick={() => setCurrentScreen("wardrobe")}
+                    className={`flex flex-col items-center gap-0.5 px-2 py-1 text-slate-400 transition hover:text-[#8D5B4C] ${(currentScreen === "wardrobe" || currentScreen === "item_detail") ? "text-[#8D5B4C] font-bold" : "opacity-90"}`}
+                  >
+                    <Layers className="h-4 w-4" />
+                    <span className="text-[8.5px] font-bold">{appLang === "EN" ? "Wardrobe" : "Гардероб"}</span>
+                  </button>
+
+                  <button 
                     onClick={() => setCurrentScreen("decisions")}
-                    className={`flex flex-col items-center gap-0.5 px-3 py-1 text-slate-400 transition hover:text-[#8D5B4C] ${(currentScreen === "decisions" || currentScreen === "shopping_check") ? "text-[#8D5B4C] font-bold" : "opacity-90"}`}
+                    className={`flex flex-col items-center gap-0.5 px-2 py-1 text-slate-400 transition hover:text-[#8D5B4C] ${(currentScreen === "decisions" || currentScreen === "shopping_check") ? "text-[#8D5B4C] font-bold" : "opacity-90"}`}
                   >
                     <CheckSquare className="h-4 w-4" />
                     <span className="text-[8.5px] font-bold">{appLang === "EN" ? "Decisions" : "Решения"}</span>
@@ -2345,18 +3352,18 @@ export default function App() {
 
                   <button 
                     onClick={() => setCurrentScreen("looks")}
-                    className={`flex flex-col items-center gap-0.5 px-3 py-1 text-slate-400 transition hover:text-[#8D5B4C] ${currentScreen === "looks" ? "text-[#8D5B4C] font-bold" : "opacity-90"}`}
+                    className={`flex flex-col items-center gap-0.5 px-2 py-1 text-slate-400 transition hover:text-[#8D5B4C] ${currentScreen === "looks" ? "text-[#8D5B4C] font-bold" : "opacity-90"}`}
                   >
                     <Sparkles className="h-4 w-4" />
                     <span className="text-[8.5px] font-bold">{appLang === "EN" ? "Looks" : "Образы"}</span>
                   </button>
 
                   <button 
-                    onClick={() => setCurrentScreen("settings")}
-                    className={`flex flex-col items-center gap-0.5 px-3 py-1 text-slate-400 transition hover:text-[#8D5B4C] ${currentScreen === "settings" ? "text-[#8D5B4C] font-bold" : "opacity-90"}`}
+                    onClick={() => setCurrentScreen("profile")}
+                    className={`flex flex-col items-center gap-0.5 px-2 py-1 text-slate-400 transition hover:text-[#8D5B4C] ${(currentScreen === "profile" || currentScreen === "settings" || currentScreen === "report") ? "text-[#8D5B4C] font-bold" : "opacity-90"}`}
                   >
-                    <Settings className="h-4 w-4" />
-                    <span className="text-[8.5px] font-bold">{appLang === "EN" ? "Settings" : "Настройки"}</span>
+                    <User className="h-4 w-4" />
+                    <span className="text-[8.5px] font-bold">{appLang === "EN" ? "Profile" : "Профиль"}</span>
                   </button>
                 </div>
               </div>
@@ -2372,15 +3379,15 @@ export default function App() {
           </div>
         </section>
 
-        {/* RIGHT COLUMN: Senior Kotlin Code Inspector Panels */}
+        {/* RIGHT COLUMN: Senior Kotlin Code Inspector & Handoff Blueprints */}
         <section className="w-full lg:w-[460px] xl:w-[500px] bg-slate-900 overflow-y-auto flex flex-col border-t lg:border-t-0 border-slate-800 shrink-0 select-none scrollbar-thin">
           <div className="p-4 border-b border-slate-800 bg-slate-950 flex flex-col gap-2.5">
             <div className="flex items-center gap-1.5">
               <BookOpen className="h-5 w-5 text-emerald-400" />
-              <h3 className="font-bold text-sm text-slate-200">Jetpack Compose Architecture</h3>
+              <h3 className="font-bold text-sm text-slate-200">Android Handoff Specification</h3>
             </div>
             <p className="text-xs text-slate-400 leading-relaxed text-left">
-              Explore the exact Kotlin files currently running inside the native Android codebase. The active tab updates as you navigate screens on the simulator.
+              These reference Kotlin snippets represent Jetpack Compose blueprints. Use them as design directives for building the real native Android layout and navigation.
             </p>
           </div>
 
@@ -2511,6 +3518,105 @@ export default function App() {
                 className="px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-lg text-xs font-bold"
               >
                 {appLang === "EN" ? "Reset" : "Сбросить"}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Detailed Decision View Modal Overlay */}
+      {selectedDecisionForDetails && (
+        <div className="fixed inset-0 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+          <div className="bg-white border border-slate-205 rounded-2xl max-w-sm w-full p-5 space-y-4 shadow-xl overflow-y-auto max-h-[90vh]">
+            <div className="flex justify-between items-start pb-2 border-b border-slate-100">
+              <div>
+                <h3 className="font-extrabold text-[#8D5B4C] text-[13px] uppercase tracking-wide">
+                  🔍 {appLang === "EN" ? "Garment Decision Check" : "Проверка вещи"}
+                </h3>
+                <span className="text-[9px] text-slate-400 block mt-0.5 font-medium leading-none">
+                  {appLang === "EN" ? "Category: " : "Категория: "}{" "}
+                  {appLang === "EN" ? selectedDecisionForDetails.category : {
+                    Top: "Верх", Bottom: "Низ", Dress: "Платье", Outerwear: "Верхняя одежда", Shoes: "Обувь", Bag: "Сумка", Accessory: "Аксессуар"
+                  }[selectedDecisionForDetails.category as any] || selectedDecisionForDetails.category}
+                </span>
+              </div>
+              <span className={`text-[8.5px] font-black px-2 py-0.5 rounded-md font-mono shrink-0 uppercase tracking-wide border ${
+                selectedDecisionForDetails.verdict === "Good match" 
+                  ? "bg-emerald-50 text-emerald-800 border-emerald-200" 
+                  : selectedDecisionForDetails.verdict === "Maybe" 
+                    ? "bg-amber-50 text-amber-800 border-amber-200" 
+                    : "bg-rose-50 text-rose-800 border-rose-200"
+              }`}>
+                {selectedDecisionForDetails.verdict === "Good match" && (appLang === "EN" ? s.verdictGood : s.verdictGood)}
+                {selectedDecisionForDetails.verdict === "Maybe" && (appLang === "EN" ? "MAYBE" : s.verdictMaybe)}
+                {selectedDecisionForDetails.verdict === "Skip" && (appLang === "EN" ? s.verdictSkip : s.verdictSkip)}
+              </span>
+            </div>
+
+            <div className="space-y-3 text-xs text-slate-700 text-left">
+              {/* Context */}
+              <div className="space-y-0.5 bg-slate-50 p-2.5 rounded-lg">
+                <span className="text-[9.5px] font-extrabold uppercase tracking-wide text-slate-400 block">
+                  {appLang === "EN" ? "Target Intent Context" : "Цель и Контекст покупки"}
+                </span>
+                <p className="text-[10px] leading-relaxed text-slate-700 font-medium">
+                  {appLang === "EN" ? selectedDecisionForDetails.context : {
+                    Basic: "Базовая вещь", Trend: "Трендовая вещь", Occasion: "Вещь для редкого случая", Similar: "Похожа на то, что уже есть", Unsure: "Малополезная вещь"
+                  }[selectedDecisionForDetails.context as any] || selectedDecisionForDetails.context}
+                </p>
+              </div>
+
+              {/* Color synergy */}
+              <div className="space-y-0.5 bg-slate-50 p-2.5 rounded-lg">
+                <span className="text-[9.5px] font-extrabold uppercase tracking-wide text-slate-400 block">
+                  {appLang === "EN" ? "Color Synergy Analysis" : "Анализ синергии цвета"}
+                </span>
+                <p className="text-[10px] leading-relaxed text-slate-700">
+                  {selectedDecisionForDetails.reasonEn && (selectedDecisionForDetails.reasonEn.toLowerCase().includes("charcoal") || selectedDecisionForDetails.reasonRu.toLowerCase().includes("серый блейзер")) ? (
+                    appLang === "EN"
+                      ? "Color Synergy: Aligns perfectly with your master Soft Autumn palette guidelines."
+                      : "Синергия цвета: отлично гармонирует с палитрой Мягкой Осени в вашем отчете."
+                  ) : selectedDecisionForDetails.reasonEn && (selectedDecisionForDetails.reasonEn.toLowerCase().includes("similar") || selectedDecisionForDetails.reasonRu.toLowerCase().includes("белые кеды")) ? (
+                    appLang === "EN"
+                      ? "Color Clash: High friction contrast that disrupts your natural aesthetic harmony."
+                      : "Цветовая гамма: слишком контрастные или перенасыщенные тона, спорящие с вашей базой."
+                  ) : (
+                    appLang === "EN"
+                      ? "Color Check: Vivid chromatic tone that requires careful surrounding layers."
+                      : "Проверка цвета: достаточно яркий оттенок, потребует грамотной калибровки аксессуаров."
+                  )}
+                </p>
+              </div>
+
+              {/* Outfit count compatibility */}
+              <div className="space-y-0.5 bg-amber-50/10 p-2.5 rounded-lg border border-amber-200/30">
+                <span className="text-[9.5px] font-extrabold uppercase tracking-wide text-slate-400 block">
+                  {appLang === "EN" ? "Estimated Outfit Combinations" : "Совместимые образы"}
+                </span>
+                <p className="text-[10px] leading-relaxed text-slate-800 font-semibold font-mono text-[#8D5B4C]">
+                  ⚡ {appLang === "EN" 
+                    ? `StyleAI projects ${selectedDecisionForDetails.outfitsCount} outfit matches with existing clothes` 
+                    : `StyleAI оценивает до ${selectedDecisionForDetails.outfitsCount} вариантов сочетаний`}
+                </p>
+              </div>
+
+              {/* Structured Reason */}
+              <div className="space-y-0.5">
+                <span className="text-[9.5px] font-extrabold uppercase tracking-wide text-slate-400 block">
+                  {appLang === "EN" ? "Decision Justification" : "Обоснование совета"}
+                </span>
+                <p className="text-[10px] leading-relaxed italic text-slate-650 bg-slate-50 p-2 rounded-lg">
+                  "{appLang === "EN" ? selectedDecisionForDetails.reasonEn : selectedDecisionForDetails.reasonRu}"
+                </p>
+              </div>
+            </div>
+
+            <div className="flex justify-end pt-2 border-t border-slate-100">
+              <button 
+                onClick={() => setSelectedDecisionForDetails(null)}
+                className="w-full py-2 bg-[#8D5B4C] hover:bg-[#8D5B4C]/90 text-white rounded-lg text-xs font-bold transition"
+              >
+                {appLang === "EN" ? "Back to Decisions" : "Вернуться к решениям"}
               </button>
             </div>
           </div>
