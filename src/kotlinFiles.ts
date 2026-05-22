@@ -59,7 +59,13 @@ data class ShoppingCheckResult(
     val explanationVersatility: String,
     val outfitCountEstimate: String,
     val shoppingAdvice: String
-)`
+)
+
+sealed class ShoppingCheckUiState {
+    object Input : ShoppingCheckUiState()
+    object Loading : ShoppingCheckUiState()
+    data class Result(val result: ShoppingCheckResult) : ShoppingCheckUiState()
+}`
   },
   localization: {
     name: "AppLocalization.kt",
@@ -305,6 +311,89 @@ class ShoppingCheckViewModel(
 
     fun reset() {
         _uiState.value = ShoppingCheckUiState.Input
+    }
+
+    private fun evaluateShoppingResult(
+        category: ClothingCategory,
+        context: String,
+        colorDir: ColorDirection,
+        hasReport: Boolean
+    ): ShoppingCheckResult {
+        var verdict = ShoppingVerdict.MAYBE
+        
+        if (context == "Similar" || context == "Похожая вещь") {
+            verdict = ShoppingVerdict.SKIP
+        } else if ((context == "Basic" || context == "Базовая вещь") && 
+                   (colorDir == ColorDirection.NEUTRAL || colorDir == ColorDirection.WARM || colorDir == ColorDirection.SOFT)) {
+            verdict = ShoppingVerdict.GOOD_MATCH
+        } else if ((context == "Trend" || context == "Тренд сезона") && colorDir == ColorDirection.CONTRAST) {
+            verdict = ShoppingVerdict.MAYBE
+        } else if (context == "Occasion" || context == "Особый случай") {
+            verdict = if (colorDir == ColorDirection.NEUTRAL || colorDir == ColorDirection.WARM || colorDir == ColorDirection.SOFT) {
+                ShoppingVerdict.MAYBE
+            } else {
+                ShoppingVerdict.SKIP
+            }
+        } else if (context == "Trend" || context == "Тренд сезона" || context == "Unsure" || context == "Не уверен") {
+            verdict = ShoppingVerdict.MAYBE
+        }
+
+        if ((category == ClothingCategory.SHOES || category == ClothingCategory.BAG || category == ClothingCategory.ACCESSORY) && 
+            colorDir == ColorDirection.NEUTRAL) {
+            verdict = if (context == "Similar" || context == "Похожая вещь") ShoppingVerdict.SKIP else ShoppingVerdict.GOOD_MATCH
+        }
+
+        val explanationColor: String
+        val explanationSilhouette: String
+        val explanationCapsule: String
+        val explanationVersatility: String
+        val outfitCountEstimate: String
+        val shoppingAdvice: String
+
+        when (verdict) {
+            ShoppingVerdict.GOOD_MATCH -> {
+                explanationColor = if (hasReport) {
+                    "Color Synergy: Aligns perfectly with your master Soft Autumn palette guidelines."
+                } else {
+                    "Color Synergy: Neutral and soft coordinates provide safe base matching versatility."
+                }
+                explanationSilhouette = "Silhouette Fit: Standard straight construction balances and flatters your form."
+                explanationCapsule = "Capsule Utility: Fills high-priority structural gaps in your wardrobe checklist."
+                explanationVersatility = "Versatility: Supports multiple styles. Beautifully coordinates with office tailoring or relaxed jeans."
+                outfitCountEstimate = "Creates 4-6 outfits compatibility"
+                shoppingAdvice = "Highly recommended purchase. Built on functional color logic rather than trend hype."
+            }
+            ShoppingVerdict.MAYBE -> {
+                explanationColor = if (hasReport) {
+                    "Color Check: Tolerable tone, but does not strictly feature Soft Autumn warmth."
+                } else {
+                    "Color Check: Vivid chromatic tone that requires careful surrounding layers."
+                }
+                explanationSilhouette = "Silhouette Fit: Normal geometry. Could overwhelm your proportions if worn oversized."
+                explanationCapsule = "Capsule Utility: Medium priority. Best added only if you are fully lacking this category."
+                explanationVersatility = "Versatility: Slightly limited combination capacity. Best reserved for predefined outfits."
+                outfitCountEstimate = "Creates 2-3 outfits compatibility"
+                shoppingAdvice = "Proceed with caution. Double check if you can build at least three distinct fits."
+            }
+            ShoppingVerdict.SKIP -> {
+                explanationColor = "Color Clash: High friction contrast that disrupts your natural aesthetic harmony."
+                explanationSilhouette = "Silhouette Fit: Bulky or uncomfortable tailoring that restricts movement."
+                explanationCapsule = "Capsule Utility: Redundant purchase. Adds clutter to your active wardrobe."
+                explanationVersatility = "Versatility: Low index. Extremely hard to pair with basic everyday items."
+                outfitCountEstimate = "1 outfit maximum"
+                shoppingAdvice = "Skip this purchase. Strongly advisable to pass. This item is likely to remain unworn."
+            }
+        }
+
+        return ShoppingCheckResult(
+            verdict = verdict,
+            explanationColor = explanationColor,
+            explanationSilhouette = explanationSilhouette,
+            explanationCapsule = explanationCapsule,
+            explanationVersatility = explanationVersatility,
+            outfitCountEstimate = outfitCountEstimate,
+            shoppingAdvice = shoppingAdvice
+        )
     }
 }`
   },
